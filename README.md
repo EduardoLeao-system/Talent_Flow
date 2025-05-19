@@ -89,10 +89,9 @@ npm run dev
 ```
 ## 🤝 Equipe
 
-```
+
 Este projeto foi desenvolvido por uma equipe ínterdisciplinar com foco em design de software, usabilidade e interaçao frontend, esta arquitetura adota princípios de componentização, isolamento de responsabilidades e escalabilidade.
 
-```
 
 ## 📄 Licença
 
