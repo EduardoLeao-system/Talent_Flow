@@ -71,21 +71,19 @@ src/
 ## 🚀 Como Executar
 
 1. Clone o repositório:
-   ```
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio
-   ```
+```
+git clone https://github.com/Eduardo-system/Talent_Flow.git
+cd Talent_Flow
+```
 2. Instale as dependências:
 
 ```
 npm install
-
 ```
 3. Inicie o servidor de desenvolvimento:
 
 ```
 npm run dev
-
 ```
 ## 🤝 Equipe
 
@@ -94,6 +92,5 @@ Este projeto foi desenvolvido por uma equipe ínterdisciplinar com foco em desig
 
 
 ## 📄 Licença
-
 
 Este projeto está sob a licença MIT.
