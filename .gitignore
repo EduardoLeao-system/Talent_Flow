@@ -28,3 +28,8 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+eslint.config.js
+.prettierrc.json
+vite.config.js
+.editorconfig
