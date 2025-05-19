@@ -96,7 +96,5 @@ Este projeto foi desenvolvido por uma equipe ínterdisciplinar com foco em desig
 
 ## 📄 Licença
 
-```
-Este projeto está sob a licença MIT.
 
-```
+Este projeto está sob a licença MIT.
