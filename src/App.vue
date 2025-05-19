@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <h1>Vue 3 + Vite + TypeScript + Tailwind CSS</h1>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <HelloWorld msg="This is a test" />
+    <Navbar />
+    <router-view />
   </div>
-
 </template>
 
+<script>
+import Navbar from './components/Navbar.vue'
 
-<script></script>
-
-
-<style></style>
+export default {
+  components: {
+    Navbar
+    
+  }
+}
+</script>
