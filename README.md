@@ -72,18 +72,18 @@ src/
 
 1. Clone o repositório:
 ```
-git clone https://github.com/Eduardo-system/Talent_Flow.git
-cd Talent_Flow
+   git clone https://github.com/EduardoLeao-system/Talent_Flow.git
+   cd Talent_Flow
 ```
 2. Instale as dependências:
 
 ```
-npm install
+  npm install
 ```
 3. Inicie o servidor de desenvolvimento:
 
 ```
-npm run dev
+  npm run dev
 ```
 ## 🤝 Equipe
 
