@@ -1,7 +1,7 @@
 <template>
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <h2 class="mb-4">Login</h2>
+  <div class="login-bg">
+    <div class=" login-box">
+      <h2 class="mb-4 text-center">Login</h2>
       <form @submit.prevent="login">
         <div class="mb-3">
           <label>Email</label>
@@ -10,6 +10,9 @@
         <div class="mb-3">
           <label>Senha</label>
           <input v-model="form.senha" type="password" class="form-control" required />
+          <div class="text-end mt-2">
+          <button type="button" class="btn-forgot">Esqueceu a senha?</button>
+        </div>
         </div>
         <button class="btn btn-primary w-100">Entrar</button>
       </form>
@@ -19,9 +22,10 @@
 
 <script>
 import api from '../services/api'
+import '/assets/main.css'
 
 export default {
-  name : 'AppLogin',
+  name: 'AppLogin',
   data() {
     return {
       form: { email: '', senha: '' }

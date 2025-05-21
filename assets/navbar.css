@@ -1,0 +1,13 @@
+
+.navbar {
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
+}
+
+.fa-home{
+   font-size: 1.5rem;
+  font-weight: 700;
+  /* cor personalizada em destaque */
+  color: var(--color-heading);
+  color: rgb(214, 214, 219);;
+
+}
