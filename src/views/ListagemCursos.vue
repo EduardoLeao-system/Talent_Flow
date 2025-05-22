@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-4">
     <h2>Lista de Cursos</h2>
     <ul class="list-group">
       <li v-for="curso in cursos" :key="curso.id" class="list-group-item">

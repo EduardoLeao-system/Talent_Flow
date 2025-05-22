@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'axios'
 import '../assets/main.css'
 import '../assets/navbar.css'
+import '../assets/appStyle.css'
 
 createApp(App)
   .use(router)

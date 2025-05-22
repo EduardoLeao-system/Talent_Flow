@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-4">
     <h2>Cadastrar Curso</h2>
     <form @submit.prevent="cadastrarCurso">
       <div class="mb-3">

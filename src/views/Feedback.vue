@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-4">
     <h2>Enviar Feedback</h2>
     <form @submit.prevent="enviarFeedback">
       <div class="mb-3">
