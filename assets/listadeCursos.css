@@ -1,0 +1,60 @@
+h2{
+  text-align: center;
+}
+.image-logo {
+  width: 70px;
+  height: 110px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  margin: 0 auto 12px auto;
+  display: block;
+  border: 2px solid #282d2e;
+  transition: transform 0.2s;
+}
+.image-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(13,202,240,0.25);
+}
+
+.border-info {
+  border: 2px solid #17a2b8;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 0 auto 24px auto;
+  background-color: #f8f9fa;
+  max-width: 260px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 992px) {
+  .border-info {
+    max-width: 100%;
+    min-height: 220px;
+    margin: 0 auto 16px auto;
+    padding: 8px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .border-info {
+    max-width: 100%;
+    min-height: 180px;
+    margin: 0 auto 10px auto;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .border-info {
+    max-width: 100%;
+    min-height: 120px;
+    margin: 0 auto 4px auto;
+    padding: 4px;
+    border-radius: 10px;
+  }
+}
