@@ -1,60 +1,71 @@
 <!-- template de Dashboad para alteraçoes -->
 <template>
-  <div class="dashboard-container">
+  <section class="dashboard-container">
     <!-- Saudação personalizada -->
-    <div class="welcome-section mb-4">
+    <section class="welcome-section text-center mb-4">
       <h2 class="greeting">Olá, {{ userName }}!</h2>
       <p class="text-muted">{{ welcomeMessage }}</p>
-    </div>
+    </section>
 
     <!-- Estatísticas/Métricas -->
-    <div class="stats-container row mb-4">
-      <div class="col-md-4 mb-3" v-for="stat in statistics" :key="stat.title">
+    <section class="stats-container row mb-4">
+      <article
+        class="col-md-4 mb-3"
+        v-for="stat in statistics"
+        :key="stat.title"
+      >
         <div class="stat-card" :class="stat.colorClass">
-          <div class="stat-icon">
-            <i :class="stat.icon"></i>
-          </div>
-          <!--Estatisticas gerais por exemplo de um curso cadastrado por exemplo e seus dados -->
+          <span class="stat-icon"><i :class="stat.icon"></i></span>
           <div class="stat-content">
             <h3 class="stat-value">{{ stat.value }}</h3>
             <p class="stat-title">{{ stat.title }}</p>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <!-- Cards principais com layout uniforme -->
+    <!-- Cards principais -->
     <h4 class="section-title mb-3">Ações Rápidas</h4>
-    <div class="row feature-cards">
-      <!-- Todos os cards com o mesmo tamanho -->
-      <div class="col-md-4 mb-3" v-for="(card, index) in cards" :key="index">
-        <div class="feature-card"
-             :class="[index === 0 ? 'primary-card' : index === 1 ? 'secondary-card' : 'tertiary-card', {'card-hovered': hoveredCard === index}]"
-             @mouseover="hoveredCard = index" @mouseleave="hoveredCard = null">
+    <section class="row feature-cards">
+      <article
+        class="col-md-4 mb-3"
+        v-for="(card, index) in cards"
+        :key="index"
+      >
+        <div
+          class="feature-card"
+          :class="[index === 0 ? 'primary-card' : index === 1 ? 'secondary-card' : 'tertiary-card', {'card-hovered': hoveredCard === index}]"
+          @mouseover="hoveredCard = index"
+          @mouseleave="hoveredCard = null"
+        >
           <div class="card-content">
-            <div class="icon-container">
-              <i :class="card.icon"></i>
-            </div>
+            <span class="icon-container"><i :class="card.icon"></i></span>
             <h4>{{ card.text }}</h4>
             <p>{{ card.description }}</p>
-            <router-link :to="card.route" class="btn mt-2" :class="index === 0 ? 'btn-primary' : 'btn-outline-primary'">
+            <router-link
+              :to="card.route"
+              class="btn mt-2"
+              :class="index === 0 ? 'btn-primary' : 'btn-outline-primary'"
+            >
               Acessar <i class="bi bi-arrow-right"></i>
             </router-link>
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
     <!-- Atividades recentes -->
-    <div class="row mt-4">
-      <div class="col-md-12 mb-3">
+    <section class="row mt-4">
+      <article class="col-12 mb-3">
         <div class="recent-activities-card">
           <h4 class="section-title">Atividades Recentes</h4>
           <div class="activity-list">
-            <div v-for="(activity, index) in recentActivities" :key="index" class="activity-item">
-              <div class="activity-icon">
-                <i :class="activity.icon"></i>
-              </div>
+            <div
+              v-for="(activity, index) in recentActivities"
+              :key="index"
+              class="activity-item"
+            >
+              <span class="activity-icon"><i :class="activity.icon"></i></span>
               <div class="activity-details">
                 <p class="activity-text">{{ activity.text }}</p>
                 <small class="activity-time">{{ activity.time }}</small>
@@ -65,9 +76,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </article>
+    </section>
+  </section>
 </template>
 
 <script>

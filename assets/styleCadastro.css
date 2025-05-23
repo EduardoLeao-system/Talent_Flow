@@ -1,0 +1,133 @@
+.form-control, .form-select {
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    background-color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.form-control:hover, .form-select:hover {
+    border-color: #0d6efd;
+    background-color: #f8f9fa;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    border-radius: 12px;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(13, 110, 253, 0.2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0a58ca 0%, #084298 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(13, 110, 253, 0.3);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(108, 117, 125, 0.2);
+}
+
+.btn-secondary:hover {
+    background-color: #5c636a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(108, 117, 125, 0.3);
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+/* Animação suave */
+.form-control, .form-select {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Validação se nao tiver informaçoes necessarias fica com aspecto vermelho */
+.form-control:invalid:focus,
+.form-select:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Campos obrigatórios */
+.form-label.required::after {
+    content: '*';
+    color: #dc3545;
+    margin-left: 4px;
+}

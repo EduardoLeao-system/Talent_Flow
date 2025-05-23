@@ -6,7 +6,7 @@
         <div class="card border-info">
           <div class="card-body text-center">
             <img class="image-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Logo">
-            <h5 class="card-title">Java</h5>
+            <h5 class="card-title">Java para iniciantes</h5>
             <button class="btn btn-outline-secondary">Saiba mais</button>
           </div>
         </div>
@@ -15,7 +15,25 @@
         <div class="card border-info">
           <div class="card-body text-center">
             <img class="image-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker Logo">
-            <h5 class="card-title">Docker</h5>
+            <h5 class="card-title">Docker para iniciantes</h5>
+            <button class="btn btn-outline-secondary">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+       <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card border-info">
+          <div class="card-body text-center">
+            <img class="image-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="Docker Logo">
+            <h5 class="card-title">PHP para iniciantes</h5>
+            <button class="btn btn-outline-secondary">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+        <div class="card border-info">
+          <div class="card-body text-center">
+            <img class="image-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVEIyk7Bjt7kj8_-9Km2Jx-BjsahCxTN3ilw&s" alt="Keyboard Logo">
+            <h5 class="card-title">Informática Avançada</h5>
             <button class="btn btn-outline-secondary">Saiba mais</button>
           </div>
         </div>
