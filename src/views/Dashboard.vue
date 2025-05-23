@@ -28,8 +28,8 @@
     <div class="row feature-cards">
       <!-- Todos os cards com o mesmo tamanho -->
       <div class="col-md-4 mb-3" v-for="(card, index) in cards" :key="index">
-        <div class="feature-card" 
-             :class="[index === 0 ? 'primary-card' : index === 1 ? 'secondary-card' : 'tertiary-card', {'card-hovered': hoveredCard === index}]" 
+        <div class="feature-card"
+             :class="[index === 0 ? 'primary-card' : index === 1 ? 'secondary-card' : 'tertiary-card', {'card-hovered': hoveredCard === index}]"
              @mouseover="hoveredCard = index" @mouseleave="hoveredCard = null">
           <div class="card-content">
             <div class="icon-container">
