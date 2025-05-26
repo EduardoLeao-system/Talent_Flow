@@ -10,7 +10,7 @@
           <form @submit.prevent="enviarFeedback">
             <div class="mb-3">
               <label class="form-label">Nome</label>
-              <input type="text" v-model="nome" class="form-control bg-white text-dark" placeholder="user" />
+              <input type="text" v-model="nome" class="form-control bg-white text-dark" placeholder="Nome de usuario" />
             </div>
             <div class="mb-3">
               <label class="form-label">Curso</label>
