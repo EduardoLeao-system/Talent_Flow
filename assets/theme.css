@@ -1,0 +1,74 @@
+/* Variáveis de tema */
+:root {
+  /* Tema claro (padrão) */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --text-primary: #2c3e50;
+  --text-secondary: #6c757d;
+  --border-color: #e9ecef;
+  --card-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  --accent-color: #3498db;
+  --accent-hover: #2980b9;
+  --navbar-bg: rgb(19, 22, 26);
+  --navbar-text: #ffffff;
+  --sidebar-bg: linear-gradient(135deg, #2c3e50, #1a252f);
+  --sidebar-text: #ffffff;
+  --sidebar-link-hover: rgba(255,255,255,0.1);
+}
+
+/* Tema escuro */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #e9ecef;
+  --text-secondary: #adb5bd;
+  --border-color: #2c3e50;
+  --card-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  --accent-color: #3498db;
+  --accent-hover: #2980b9;
+  --navbar-bg: #000000;
+  --navbar-text: #ffffff;
+  --sidebar-bg: linear-gradient(135deg, #1a1a1a, #000000);
+  --sidebar-text: #ffffff;
+  --sidebar-link-hover: rgba(255,255,255,0.05);
+}
+
+/* Aplicação das variáveis */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.top-bar {
+  background-color: var(--navbar-bg) !important;
+  color: var(--navbar-text);
+}
+
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: var(--sidebar-link-hover);
+}
+
+.dashboard-card, .content-section, .stat-card, .action-card {
+  background-color: var(--bg-secondary);
+  box-shadow: var(--card-shadow);
+  border-color: var(--border-color);
+}
+
+.section-title, .stat-value, .action-card h3, .content-header h1 {
+  color: var(--text-primary);
+}
+
+.stat-label, .action-card p, .activity-time {
+  color: var(--text-secondary);
+}
+
+/* Transição suave para mudança de tema */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

@@ -106,9 +106,17 @@ button {
   color: rgba(255, 255, 255, 1);
 }
 
+.nav__link.exit-link {
+  color: #ffc107;
+}
+
+.nav__link.exit-link:hover {
+  color: #ffca2c;
+}
+
 .btn {
-  color: #fff;
-  background-color: #0071e3;
+  color: #e9ecef;
+  background-color: #6c757d;
   padding: 8px 20px;
   border-radius: 1000px;
   text-transform: uppercase;
@@ -119,7 +127,7 @@ button {
 }
 
 .btn:hover {
-  background-color:  rgb(28, 128, 228);
+  background-color: #5c636a;
 }
 
 .hamburger {

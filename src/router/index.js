@@ -7,7 +7,8 @@ import Feedback from '../views/Feedback.vue'
 import ListagemCursos from '../views/ListagemCursos.vue'
 
 const routes = [
-  { path: '/', name: 'Login', component: Login },
+  { path: '/', redirect: '/login' },
+  { path: '/login', name: 'Login', component: Login },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/cadastro', name: 'CadastroCurso', component: CadastroCurso },
   { path: '/feedback', name: 'Feedback', component: Feedback },

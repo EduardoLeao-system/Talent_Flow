@@ -1,7 +1,16 @@
 <template>
   <div class="top-bar">
-    <div class="top-bar__content" style="height: 60px; background-color: rgb(19, 22, 26);">
-      <router-link class="fa fa-home" aria-hidden="true" to="/"></router-link>
+    <div class="top-bar__content" style="height: 60px;">
+      <!-- Ícone da casa aparece apenas quando NÃO estiver no dashboard -->
+      <router-link class="fa fa-home" aria-hidden="true" to="/" v-if="!$route.path.includes('/dashboard')"></router-link>
+
+      <!-- Botão de toggle da sidebar -->
+      <button class="sidebar-toggle" @click="toggleSidebar" v-if="$route.path.includes('/dashboard')">
+        <i class="bi bi-lightning-charge-fill"></i>
+      </button>
+      
+      <!-- Botão de alternância de tema -->
+      <ThemeToggle class="theme-toggle-btn" />
 
       <!-- Botão hambúrguer -->
       <button class="hamburger" :class="{ 'hamburger--open': isMenuOpen }" @click="toggleMenu">
@@ -58,10 +67,15 @@
 <script>
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
+import ThemeToggle from './ThemeToggle.vue'
 import '/assets/navbar.css'
+import '/assets/theme.css'
 
 export default {
   name: 'AppNavbar',
+  components: {
+    ThemeToggle
+  },
   setup() {
     const router = useRouter()
     const isMenuOpen = ref(false)
@@ -76,6 +90,12 @@ export default {
       isMenuOpen.value = false
     }
 
+    // Toggle da sidebar do dashboard
+    function toggleSidebar() {
+      // Emite um evento que será capturado pelo componente Dashboard
+      window.dispatchEvent(new CustomEvent('toggle-sidebar'))
+    }
+
     function logout() {
       // Confirmação de logout e feedback visual simples
       if (confirm('Deseja realmente sair?')) {
@@ -86,7 +106,7 @@ export default {
       }
     }
 
-    return { logout, closeNavbar, toggleMenu, isMenuOpen }
+    return { logout, closeNavbar, toggleMenu, isMenuOpen, toggleSidebar }
   }
 }
 </script>
@@ -100,7 +120,35 @@ export default {
 }
 
 .top-bar__content {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.theme-toggle-btn {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+/* Botão de toggle da sidebar */
+.sidebar-toggle {
+  background-color: transparent;
+  color: #3498db;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  transform: scale(1.1);
+  color: #2980b9;
 }
 
 /* Menu mobile */

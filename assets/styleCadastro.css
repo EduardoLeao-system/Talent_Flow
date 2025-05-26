@@ -1,11 +1,17 @@
+/* Background removido e movido para background.css */
+
+.card {
+  transition: all 0.3s ease;
+}
 .form-control, .form-select {
-    border: 2px solid #d1d5db;
+    border: 1px solid #ced4da;
     border-radius: 10px;
     padding: 14px 16px;
     font-size: 1rem;
     transition: all 0.3s ease;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    color: #212529;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .form-control:focus, .form-select:focus {
@@ -22,14 +28,14 @@
 
 .form-label {
     font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
+    color: #e9ecef;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
     letter-spacing: 0.01em;
 }
 
 .form-control::placeholder {
-    color: #9ca3af;
+    color: #6c757d;
     font-style: italic;
 }
 
@@ -39,23 +45,36 @@
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 16px 12px;
+    color: #212529;
 }
 
 textarea.form-control {
-    min-height: 120px;
+    min-height: 100px;
     line-height: 1.5;
 }
 
 .card {
     border: none;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     border-radius: 12px;
+    background-color: rgba(52, 58, 64, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.card-body {
+    color: #212529;
+    padding: 1.5rem;
 }
 
 .card-header {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
     padding: 1.5rem;
     border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.card-header h2 {
+    color: #ffffff;
 }
 
 .card-header h2 {
@@ -65,41 +84,47 @@ textarea.form-control {
 }
 
 .btn {
-    padding: 12px 28px;
+    padding: 8px 20px;
     font-weight: 500;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-size: 0.95rem;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
-    border: none;
-    box-shadow: 0 4px 6px -1px rgba(13, 110, 253, 0.2);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #0a58ca 0%, #084298 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px -1px rgba(13, 110, 253, 0.3);
+    font-size: 0.9rem;
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background: linear-gradient(135deg, #6c757d 0%, #7d8893 100%);
     border: none;
-    box-shadow: 0 4px 6px -1px rgba(108, 117, 125, 0.2);
+    box-shadow: 0 2px 4px rgba(108, 117, 125, 0.15);
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background-color: #5c636a;
+    background: linear-gradient(135deg, #5c636a 0%, #6c757d 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px rgba(108, 117, 125, 0.2);
+    color: #ffffff;
+}
+
+.btn-dark {
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(33, 37, 41, 0.2);
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background: linear-gradient(135deg, #1a1e21 0%, #212529 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px -1px rgba(108, 117, 125, 0.3);
+    box-shadow: 0 6px 8px -1px rgba(33, 37, 41, 0.3);
+    color: #ffffff;
 }
 
 .form-group {
     margin-bottom: 1.75rem;
+    background-color: transparent;
 }
 
 /* Animação suave */
@@ -130,4 +155,33 @@ textarea.form-control {
     content: '*';
     color: #dc3545;
     margin-left: 4px;
+}
+form {
+    background-color: rgba(52, 58, 64, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 900px;
+    }
+    
+    .card {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .form-control, .form-select {
+        padding: 10px 12px;
+    }
+    
+    .card-header {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
 }

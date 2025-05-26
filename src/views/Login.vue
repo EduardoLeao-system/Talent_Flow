@@ -1,6 +1,6 @@
 <template>
   <div class="login-page">
-    <div class="login-bg"></div>
+    <div class="global-bg"></div>
     <div class="login-container" id="login-container" :class="{ 'move': showRegister }">
       <div class="form-container">
         <form
@@ -86,6 +86,7 @@
 
 <script>
 import api from '../services/api'
+import '../../assets/background.css'
 
 export default {
   name: 'AppLogin',
@@ -98,11 +99,15 @@ export default {
   methods: {
     async login() {
       try {
-        const res = await api.post('/login', this.form)
-        localStorage.setItem('token', res.data.token)
+        // Permitir qualquer usuário e senha
+        localStorage.setItem('token', 'token-simulado')
+        localStorage.setItem('userName', this.form.email.split('@')[0])
         this.$router.push('/dashboard')
       } catch {
-        alert('Login inválido.')
+        // Em caso de erro, ainda permite o acesso
+        localStorage.setItem('token', 'token-simulado')
+        localStorage.setItem('userName', 'usuário')
+        this.$router.push('/dashboard')
       }
     },
     async register() {
@@ -132,19 +137,7 @@ export default {
 }
 
 .login-bg {
-  background-image: url('../assets/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 100vh;
-  min-width: 100vw;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  overflow: hidden;
+  /* Usando a classe global para o background */
 }
 
 .login-box {

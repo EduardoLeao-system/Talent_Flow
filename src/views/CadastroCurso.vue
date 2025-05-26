@@ -1,7 +1,8 @@
 <template>
   <div class="container mt-4">
+    <div class="global-bg"></div>
     <div class="card shadow-sm">
-      <div class="card-header bg-primary text-white">
+      <div class="card-header">
         <h2 class="mb-0">Cadastro de Curso</h2>
       </div>
       <div class="card-body">
@@ -80,10 +81,10 @@
               />
             </div>
             <div class="col-12 d-flex gap-2 justify-content-end mt-4">
-              <button type="button" class="btn btn-secondary" @click="$router.push('/cursos')">
+              <button type="button" class="btn btn-dark" @click="$router.push('/cursos')">
                 Cancelar
               </button>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn btn-secondary">
                 Salvar Curso
               </button>
             </div>
@@ -97,6 +98,7 @@
 <script>
 import api from '../services/api'
 import '../../assets/styleCadastro.css'
+import '../../assets/background.css'
 
 export default {
   data() {

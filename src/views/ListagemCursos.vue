@@ -1,7 +1,8 @@
 <template>
   <div class="container mt-4">
-    <h2>Lista de Cursos</h2>
+  <h2>Lista de Cursos</h2>
     <div class="row mb-4">
+      <div class="global-bg"></div>
       <div class="col-6 col-sm-6 col-md-4 col-lg-3">
         <div class="card border-info">
           <div class="card-body text-center">
@@ -38,7 +39,7 @@
           </div>
         </div>
       </div>
-      <!-- Adicione mais quadros aqui seguindo o mesmo padrão -->
+      <!-- Adicionar seguindo o mesmo padrão -->
     </div>
     <!-- Lista real de cursos -->
     <ul class="list-group">
@@ -52,6 +53,7 @@
 
 <script>
 import api from '../services/api'
+import '../../assets/background.css'
 import '/assets/listadeCursos.css'
 
 export default {
