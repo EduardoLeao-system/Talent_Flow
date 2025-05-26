@@ -99,6 +99,8 @@
 import api from '../services/api'
 import '../../assets/styleCadastro.css'
 import '../../assets/background.css'
+import '../../assets/common-background.css'
+import '../../assets/modern-form.css'
 
 export default {
   data() {

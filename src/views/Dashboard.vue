@@ -240,7 +240,7 @@ export default {
 .dashboard-wrapper {
   display: flex;
   min-height: 100vh;
-  background-color: #f5f7fa;
+  background-color: #121920;
 }
 
 /* Sidebar */
@@ -361,7 +361,7 @@ export default {
 
 .content-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -369,7 +369,7 @@ export default {
 .content-header h1 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -403,13 +403,14 @@ export default {
 }
 
 .stat-card {
-  background-color: #fff;
+  background-color: #1e2a38;
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
   align-items: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
 }
 
 .stat-card:hover {
@@ -429,7 +430,7 @@ export default {
 }
 
 .stat-icon.blue {
-  background-color: rgba(52, 152, 219, 0.1);
+  background-color: rgba(52, 152, 219, 0.2);
   color: #3498db;
 }
 
@@ -451,12 +452,12 @@ export default {
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 0.25rem;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #a8b2c1;
   margin: 0 0 0.5rem;
 }
 
@@ -480,11 +481,12 @@ export default {
 
 /* Seções de conteúdo */
 .content-section {
-  background-color: #fff;
+  background-color: #1e2a38;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  color: #fff;
 }
 
 .section-header {
@@ -497,7 +499,7 @@ export default {
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .section-header i {
@@ -513,12 +515,13 @@ export default {
 }
 
 .action-card {
-  background-color: #fff;
+  background-color: #1e2a38;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #f0f0f0;
+  border: none;
+  color: #fff;
 }
 
 .action-card:hover {
@@ -538,7 +541,7 @@ export default {
 }
 
 .card-icon.blue {
-  background-color: rgba(52, 152, 219, 0.1);
+  background-color: rgba(52, 152, 219, 0.2);
   color: #3498db;
 }
 
@@ -556,12 +559,12 @@ export default {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0 0 0.75rem;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .action-card p {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #a8b2c1;
   margin: 0 0 1.5rem;
   line-height: 1.5;
 }
@@ -609,7 +612,7 @@ export default {
   display: flex;
   align-items: flex-start;
   padding: 1rem 0;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #2c3e50;
 }
 
 .activity-item:last-child {
@@ -628,7 +631,7 @@ export default {
 }
 
 .activity-icon.blue {
-  background-color: rgba(52, 152, 219, 0.1);
+  background-color: rgba(52, 152, 219, 0.2);
   color: #3498db;
 }
 
@@ -648,13 +651,13 @@ export default {
 
 .activity-text {
   font-size: 0.95rem;
-  color: #2c3e50;
+  color: #ffffff;
   margin: 0 0 0.25rem;
 }
 
 .activity-time {
   font-size: 0.8rem;
-  color: #6c757d;
+  color: #a8b2c1;
 }
 
 .no-activities {

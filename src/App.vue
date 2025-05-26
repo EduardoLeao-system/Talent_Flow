@@ -4,9 +4,7 @@
       <div class="spinner"></div>
     </div>
     <Navbar />
-    <div class="floating-theme-toggle" v-if="$route.path === '/' || $route.path === '/login'">
-      <ThemeToggle />
-    </div>
+    <!-- Botão de alternância de tema removido -->
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component" />
@@ -17,16 +15,17 @@
 
 <script>
 import Navbar from './components/Navbar.vue'
-import ThemeToggle from './components/ThemeToggle.vue'
+// import ThemeToggle from './components/ThemeToggle.vue' - Removido
 import '../assets/appStyle.css'
 import '../assets/transitions.css'
 import '../assets/spinner.css'
 import '../assets/theme.css'
+import '../assets/common-background.css'
 
 export default {
   components: {
-    Navbar,
-    ThemeToggle
+    Navbar
+    // ThemeToggle removido
   },
   data() {
     return {
@@ -35,22 +34,14 @@ export default {
   },
   mounted() {
     // Simular tempo de carregamento e depois esconder o preloader
-    document.body.style.backgroundColor = '#212529';
+    document.body.style.backgroundColor = '#121920';
     setTimeout(() => {
       this.isLoaded = true;
-      document.body.style.backgroundColor = '';
+      document.body.style.backgroundColor = '#121920';
     }, 500);
   }
 }
 </script>
 <style>
-.floating-theme-toggle {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  padding: 5px;
-}
+/* Estilo do botão flutuante de tema removido */
 </style>

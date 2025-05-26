@@ -5,7 +5,6 @@ import Dashboard from '../views/Dashboard.vue'
 import CadastroCurso from '../views/CadastroCurso.vue'
 import Feedback from '../views/Feedback.vue'
 import ListagemCursos from '../views/ListagemCursos.vue'
-
 const routes = [
   { path: '/', redirect: '/login' },
   { path: '/login', name: 'Login', component: Login },

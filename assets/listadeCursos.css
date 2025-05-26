@@ -1,5 +1,7 @@
 h2{
   text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 .image-logo {
   width: 56px;
@@ -17,10 +19,86 @@ h2{
 }
 
 .border-info {
-  border: 2px solid #17a2b8;
-  background-color: #f8f9fa;
-  max-width: 200px;    /* Reduzido de 260px para 200px */
-  min-height: 150px;   /* Reduzido de 260px para 180px */
+  border: none;
+  background-color: #1e2a38;
+  max-width: 200px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.border-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.btn-outline-secondary {
+  color: #3498db;
+  border-color: #3498db;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #3498db;
+  color: #fff;
+  border-color: #3498db;
+}
+
+.list-group-item {
+  background-color: #1e2a38;
+  color: #fff;
+  border: none;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.list-group-item:hover {
+  transform: translateX(5px);
+  background-color: #253649;
+}
+
+.list-group-item small {
+  color: #a8b2c1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+[class*="col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 /* Responsividade para tablets */
@@ -28,8 +106,12 @@ h2{
   .border-info {
     max-width: 100%;
     min-height: 220px;
-    margin: 0 auto 16px auto;
-    padding: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    height: auto;
+    min-height: 40px;
   }
 }
 
@@ -38,17 +120,38 @@ h2{
   .border-info {
     max-width: 100%;
     min-height: 180px;
-    margin: 0 auto 10px auto;
-    padding: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-size: 0.9rem;
+  }
+  
+  .image-logo {
+    width: 48px;
+    height: 48px;
   }
 }
 
 @media (max-width: 480px) {
   .border-info {
     max-width: 100%;
-    min-height: 120px;
-    margin: 0 auto 4px auto;
-    padding: 4px;
+    min-height: 160px;
+    margin-bottom: 10px;
     border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+  }
+  
+  .btn-outline-secondary {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
   }
 }

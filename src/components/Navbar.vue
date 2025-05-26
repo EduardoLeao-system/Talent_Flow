@@ -9,8 +9,7 @@
         <i class="bi bi-lightning-charge-fill"></i>
       </button>
       
-      <!-- Botão de alternância de tema -->
-      <ThemeToggle class="theme-toggle-btn" />
+      <!-- Botão de alternância de tema removido -->
 
       <!-- Botão hambúrguer -->
       <button class="hamburger" :class="{ 'hamburger--open': isMenuOpen }" @click="toggleMenu">
@@ -67,14 +66,14 @@
 <script>
 import { useRouter } from 'vue-router'
 import { ref } from 'vue'
-import ThemeToggle from './ThemeToggle.vue'
+// import ThemeToggle from './ThemeToggle.vue' - Removido
 import '/assets/navbar.css'
 import '/assets/theme.css'
 
 export default {
   name: 'AppNavbar',
   components: {
-    ThemeToggle
+    // ThemeToggle removido
   },
   setup() {
     const router = useRouter()
@@ -126,10 +125,7 @@ export default {
   padding: 0 15px;
 }
 
-.theme-toggle-btn {
-  margin-left: auto;
-  margin-right: 15px;
-}
+/* Botão de alternância de tema removido */
 
 /* Botão de toggle da sidebar */
 .sidebar-toggle {
