@@ -1,8 +1,17 @@
 <template>
   <div class="top-bar">
     <div class="top-bar__content" style="height: 60px;">
-      <!-- Ícone da casa aparece apenas quando NÃO estiver no dashboard -->
-      <router-link class="fa fa-home" aria-hidden="true" to="/" v-if="!$route.path.includes('/dashboard')"></router-link>
+      <!-- Ícone da casa aparece apenas em rotas específicas (excluindo login, cursos, cadastro e feedback) -->
+      <router-link 
+        class="fa fa-home" 
+        aria-hidden="true" 
+        to="/" 
+        v-if="!$route.path.includes('/dashboard') && 
+              !$route.path.includes('/login') && 
+              !$route.path.includes('/cursos') && 
+              !$route.path.includes('/cadastro') && 
+              !$route.path.includes('/feedback')">
+      </router-link>
 
       <!-- Botão de toggle da sidebar -->
       <button class="sidebar-toggle" @click="toggleSidebar" v-if="$route.path.includes('/dashboard')">
